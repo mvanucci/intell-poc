@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Content from "../Content";
 import Header from "../Header";
 import Sidebar from "../Sidebar";
@@ -15,12 +15,10 @@ const Layout = ({ children }: Props) => {
       <S.Grid>
         <Header />
         <Sidebar>
-          <Router>
             <nav>
               <Link to="/">Pagina Inical</Link><br />
               <Link to="/config">Configurações</Link>
             </nav>
-            </Router>
         </Sidebar>
         <Content>
           {children}
