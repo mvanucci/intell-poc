@@ -8,7 +8,6 @@ export const Title = styled.h1`
   font-family: "Roboto", sans-serif;
   font-size: 56px;
   font-weight: 400;
-  text-transform: uppercase;
   color: #3e5055;
   margin-bottom: 1em;
 `;

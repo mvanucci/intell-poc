@@ -1,14 +1,14 @@
 import React from "react";
 import * as S from './style';
 
-type Props = {
-  children: any
-}
 
-const Sidebar = ({ children } :Props) => {
+const Sidebar = () => {
   return (
     <S.Container>
-      { children }
+      <S.MenuContainer>
+        <S.Li><S.To to="/">Página Inical</S.To><S.IconArrow /></S.Li>
+        <S.Li><S.To to="/config">Configurações</S.To><S.IconArrow /></S.Li>
+      </S.MenuContainer>
     </S.Container>
   );
 }
