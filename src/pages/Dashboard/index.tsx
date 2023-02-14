@@ -16,7 +16,11 @@ const Dashboard: React.FC = () => {
   useEffect(() => {
      (() => {
       request.get('https://private-anon-3ca042c626-izeusv3.apiary-mock.com/cgi-bin/api/v3/system/device').then(res => {
-        setUptime(res.data.data.uptime);
+        let uptime = new Date(res.data.data.uptime);
+        let h = uptime.getHours();
+        let m = uptime.getMinutes();
+        let s = uptime.getSeconds();
+        setUptime(`${h}:${m}:${s}`);
         setVersion(res.data.data.version);
         setModel(res.data.data.model);
         setAlias(res.data.data.alias);
